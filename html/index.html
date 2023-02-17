@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- && -->
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
+    <script>
+
+        let skelatonView =
+        `
+        <div class="col-12,col-md-4,col-lg-3">
+
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_960_720.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        `
+        let Data =
+            `
+            <div class="col-12,col-md-4,col-lg-3">
+                <div class="card" aria-hidden="true">
+                    <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title placeholder-glow">
+                        <span class="placeholder col-6"></span>
+                        </h5>
+                        <p class="card-text placeholder-glow">
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                        </p>
+                        <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                    </div>
+                </div>
+
+            </div>
+            `
+        let Row = document.querySelector(".row")
+        let respone = false
+
+        respone ? Row.innerHTML += Data : Row.innerHTML += skelatonView
+
+        respone && console.log("Hello");
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
